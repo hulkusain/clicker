@@ -1,0 +1,124 @@
+#click:hover {
+  cursor: pointer;
+}
+
+#click:active {
+  outline: none;
+  box-shadow: none;
+}
+
+#click:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-space {
+  margin: 50px 0 0 0;
+}
+
+.click-list-container {
+  padding: 0;
+  display: flex;
+}
+
+.click-list {
+  overflow-y: scroll;
+  border-right: 1px solid rgba(0,0,0,.125);
+  border-left: 1px solid rgba(0,0,0,.125);
+  flex-grow: 1;
+}
+
+.click-list li:first-child {
+  border-top: 0;
+  border-radius: 0;
+}
+
+.click-list li:last-child {
+  border-radius: 0;
+}
+
+.click-list li {
+  border-left: 0;
+  border-right: 0;
+}
+
+.click-list-hover li:hover {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.disable {
+  cursor: default;
+  background-color: #868e96;
+  border-color: #868e96;
+}
+
+.disable:hover {
+  background-color: #868e96;
+  border-color: #868e96;
+}
+
+.disable:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.skill-btn {
+  width: 150px;
+}
+
+.game-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-footer {
+  padding-bottom: 50px;
+  margin-top: auto;
+}
+
+.game-status {
+  padding: 10px;
+}
+
+.game-click {
+  flex-grow: 1;
+  padding-top: 100px;
+}
+
+#click {
+  height: 250px;
+  width: 250px;
+  font-size: 40px;
+  border-radius: 250px;
+}
+
+#score {
+  font-size: 20px;
+}
+
+.game-container {
+  flex-grow: 1;
+}
+
+.click-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 600px;
+  min-width: 650px;
+}

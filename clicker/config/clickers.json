@@ -1,0 +1,49 @@
+{
+  "clickers": {
+    "BaseClick": {
+      "value": 1000000,
+      "price": 15
+    },
+    "SuperClick": {
+      "value": 50000,
+      "price": 700
+    },
+    "RandomClick": {
+      "value": 1000000,
+      "price": 10000
+    },
+    "BigClick": {
+      "value": 100,
+      "price": 50000
+    },
+    "PassionClick": {
+      "value": 500,
+      "price": 2000000
+    },
+    "HyperClick": {
+      "value": 10000,
+      "price": 2000000
+    },
+    "GhostClick": {
+      "value": 100000,
+      "price": 120000000
+    },
+    "TnekClick": {
+      "value": 1000000,
+      "price": 4000000000
+    },
+    "CaptiosusClick": {
+      "value": 10000000,
+      "price": 50000000000
+    }
+  },
+  "achievements": {
+    "click": [100, 200, 300],
+    "lottery": [1, 3, 5],
+    "total": [100, 101, 101, 101, 101, 101, 101, 101, 101]
+  },
+  "lottery": {
+    "prize": 1000000,
+    "limit": 1000
+  }
+}

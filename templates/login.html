@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Login</title>
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/login">
+  <div class="form-group row justify-content-center form-space">
+    <div class="col-sm-6">
+      <h6 class="error">{{error}}</h6>
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" class="form-control">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" class="form-control">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-auto">
+      <a class="nav-link" href="/register">Register</a>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-auto">
+      <button class="btn btn-success" type="submit">Login</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Clicker Game</title>
+{% endblock %}
+
+{% block content %}
+<div class="row game-container">
+  <div class="col-sm-3 click-list-container">
+    <ul id="upgrade" class="click-list-hover click-list list-group">
+    </ul>
+  </div>
+  <div class="col-sm-6 game-screen">
+    <div class="row justify-content-center game-status">
+      <div id="score">0</div>
+    </div>
+    <div class="row justify-content-center game-click">
+      <button type="button" id="click" class="btn btn-primary">
+        Click
+      </button>
+    </div>
+    <div class="row justify-content-center game-footer">
+      <div class="col-sm-auto">
+        <button type="button" id="lottery-open" class="btn btn-success skill-btn" data-toggle="modal" data-target="#lottery-modal">
+          Lottery
+        </button>
+      </div>
+      <div class="col-sm-auto">
+        <button type="button" id="achievements" class="btn btn-info skill-btn" data-toggle="modal" data-target="#achievements-modal">
+          Achievements
+        </button>
+      </div>
+      <div class="col-sm-auto">
+        <button type="button" id="frenzy" class="btn btn-danger skill-btn">
+          Frenzy
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3 click-list-container">
+    <ul id="clickers" class="click-list list-group">
+    </ul>
+  </div>
+</div>
+<div class="modal fade" id="lottery-modal" tabindex="-1" role="dialog" aria-labelledby="lottery-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Lottery</h5>
+        <button id="close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6 id="lottery-error" class="error"></h6>
+        <center><span id="status"></span></center>
+        <br>
+        <input type="text" name="guess" id="guess" class="form-control">
+        <br>
+        <center><button type="button" class="btn btn-success" id="lottery">Submit</button></center>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="achievements-modal" tabindex="-1" role="dialog" aria-labelledby="achievements-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Achievements</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <center>
+          <h5>Click</h5>
+          <span id="achieve-click"></span>
+          <h5>Lottery</h5>
+          <span id="achieve-lottery"></span>
+          <h5>Total</h5>
+          <span id="achieve-total"></span>
+        </center
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js" integrity="sha256-KaSi3am04I2b10TZZ7JqEYrnNk94r0QOeIY3PtwGR/M=" crossorigin="anonymous"></script>
+<script src="../static/script/main.js"></script>
+{% endblock %}
